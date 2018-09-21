@@ -1,0 +1,136 @@
+#btnNovo{
+	-fx-background-color: transparent;
+	-fx-border-color:  #2ecc71;
+	-fx-text-fill: #2ecc71;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#btnReg{
+	-fx-background-color: #ec407a;
+	-fx-text-fill:  white;
+	-fx-border-color:  #ec407a;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#btnLimpar{
+	-fx-background-color: #ec407a;
+	-fx-text-fill:  white;
+	-fx-border-color:  #ec407a;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#btnNovo:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill:  #2ecc71;
+	-fx-border-color:  #2ecc71;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#btnRemover{
+	-fx-background-color: transparent;
+	-fx-border-color:  #e74c3c;
+	-fx-text-fill: #e74c3c;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+
+#btnRemover:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill:  #e74c3c;
+	-fx-border-color:  #e74c3c;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+
+#btnReg:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill:  #ec407a;
+	-fx-border-color:  #ec407a;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#btnLimpar:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill:  red;
+	-fx-border-color:  red;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+.jfx-radio-button {
+    -jfx-selected-color: #ec407a;
+    -jfx-unselected-color: #ec407a;
+}
+
+.table-view{
+	-fx-background-color: transparent;
+	-fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ec407a;  
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Trebuchet MS"
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+  	-fx-border-width: 1;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #eaf5f9;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ec407a;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.table-view .filler{
+	-fx-background-color: #ec407a;
+}
+
+ .table-view > .column-header-background > .show-hide-columns-button {
+    -fx-background-color: white;
+}
+
+ .table-view > .column-header-background > .show-hide-columns-button .label{
+    -fx-text-fill: black;
+}
+
+
+.combo-box .text-field {
+    -fx-prompt-text-fill: rgba(255, 0, 0, 0.5) ;
+}

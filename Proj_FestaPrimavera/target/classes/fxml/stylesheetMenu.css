@@ -1,0 +1,36 @@
+.tab-header-background{
+	-fx-background-color:   #ec407a;
+}
+
+.tab{
+	jfx-rippler-fill:  #ec407a;
+	-fx-text-fill:  #ec407a;
+	-fx-font-size: 10pt;
+}
+
+ .jfx-tab-pane .tab:selected
+{
+    -fx-background-color: #f06292;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler
+{
+	-jfx-rippler-fill: #f06292;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 12pt;
+	-fx-font-family: "Trebuchet MS";
+}
+
+.jfx-tab-pane .tab-header-area .tab-selected-line
+{
+	-fx-stroke:  #ec407a;
+}
+
+.jfx-tab-pane .tab-selected-line
+{
+	-fx-border-color: #fff;
+}

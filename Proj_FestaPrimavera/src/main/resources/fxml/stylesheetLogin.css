@@ -1,0 +1,18 @@
+#btnLogin{
+	-fx-background-color: #ec407a;
+	-fx-background-radius: 30px;
+	-fx-text-fil: #FFF;
+}
+
+#btnLogin:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill:  #ec407a;
+	-fx-border-color:  #ec407a;
+	-fx-border-style: solid;
+	-fx-transition: 5s ease-in;
+}
+
+#lblSobre:hover{
+	-fx-text-fill: #ec407a;
+	-fx-underline: true;
+}

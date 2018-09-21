@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="raiz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="690.0" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <JFXTabPane prefHeight="906.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Competições">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Competicao.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+               	<AnchorPane cache="true" minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="1245.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="tvCompeticao" layoutX="772.0" layoutY="18.0" prefHeight="590.0" prefWidth="485.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="772.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0">
+                           <columns>
+                              <TableColumn fx:id="tcEdicaoCptc" prefWidth="62.66650390625" text="Edicao" />
+                              <TableColumn fx:id="tcDataCptc" prefWidth="92.0" text="Data" />
+                              <TableColumn fx:id="tcCriteriosCptc" prefWidth="167.0" text="Critérios" />
+                              <TableColumn fx:id="tcRmMisterCptc" prefWidth="79.0" text="RM Mister" />
+                              <TableColumn fx:id="tcRmMissCptc" minWidth="0.0" prefWidth="70.0" text="RM Miss" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="26.0" layoutY="20.0" text="Cadastro de Competições" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbEdicaoCptc" focusColor="#ec407a" labelFloat="true" layoutX="134.0" layoutY="182.0" prefHeight="37.0" prefWidth="122.0" promptText="Ano da Edição">
+                           <font>
+                              <Font size="16.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txbMrVCptc" disable="true" focusColor="#ec407a" labelFloat="true" layoutX="132.0" layoutY="263.0" prefHeight="30.0" prefWidth="290.0" promptText="Mister Vencedor">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXTextField>
+                        <JFXButton id="btnReg" fx:id="btnRegCptc" layoutX="26.0" layoutY="571.0" onAction="#RegistrarCompeticao" prefHeight="31.0" prefWidth="725.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Registrar" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="26.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font></JFXButton>
+                        <JFXButton id="btnNovo" fx:id="btnNovoCptc" layoutX="1025.0" layoutY="620.0" onAction="#NovoRegistroCompeticao" prefHeight="35.0" prefWidth="235.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="1025.0" AnchorPane.rightAnchor="20.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/NOVO.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="btnRemover" fx:id="btnRmvCptc" layoutX="778.0" layoutY="620.0" onAction="#ApagarCompeticao" prefHeight="35.0" prefWidth="235.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="778.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/REMOVER.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="411.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="195.0">
+                           <image>
+                              <Image url="@../img/trofeu_pink_shadow.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblCompeticao" layoutX="26.0" layoutY="68.0" text="Nova Competição - Edição #" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="68.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnReg" fx:id="btnRankingCptc" layoutX="25.0" layoutY="622.0" onAction="#gerarRanking" prefHeight="35.0" prefWidth="725.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Gerar Ranking" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="26.0" layoutY="121.0" text="Informações" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="121.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="334.0" text="Ranking" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbMsVCptc" disable="true" focusColor="#ec407a" labelFloat="true" layoutX="449.0" layoutY="263.0" prefHeight="30.0" prefWidth="290.0" promptText="Miss Vencedora">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="dtpDataCptc" defaultColor="#ec407a" layoutX="269.0" layoutY="190.0" prefHeight="28.0" prefWidth="139.0" promptText="Data de Realização" />
+                        <TableView fx:id="tvRankingMasc" layoutX="32.0" layoutY="404.0" prefHeight="150.0" prefWidth="350.0" AnchorPane.bottomAnchor="128.0" AnchorPane.topAnchor="404.0">
+                          <columns>
+                            <TableColumn fx:id="tcPosMascCptc" prefWidth="75.0" text="Posição" />
+                            <TableColumn fx:id="tcRmMascCptc" prefWidth="60.0" text="RM" />
+                              <TableColumn fx:id="tcNomeMascCptc" prefWidth="137.0" text="Nome" />
+                              <TableColumn fx:id="tcPontuacaoMascCptc" prefWidth="76.0" text="Pontuação" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tvRankingFem" layoutX="389.0" layoutY="404.0" prefHeight="150.0" prefWidth="350.0" AnchorPane.bottomAnchor="128.0" AnchorPane.topAnchor="404.0">
+                          <columns>
+                            <TableColumn fx:id="tcPosFemCptc" prefWidth="75.0" text="Posição" />
+                            <TableColumn fx:id="tcRmFemCptc" prefWidth="57.0" text="RM" />
+                              <TableColumn fx:id="tcNomeFemCptc" prefWidth="137.0" text="Nome" />
+                              <TableColumn fx:id="tcPontuacaoFemCptc" prefWidth="78.0" text="Pontuação" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="34.0" layoutY="373.0" text="Masculino" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="391.0" layoutY="373.0" text="Feminino" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbCriteriosCptc" focusColor="#ec407a" layoutX="413.0" layoutY="192.0" prefHeight="25.0" prefWidth="330.0" promptText="Critérios" />
+                        <ImageView fitHeight="56.0" fitWidth="53.0" layoutX="315.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/boy.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="56.0" fitWidth="53.0" layoutX="674.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/woman.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Competidores">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Competidor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane cache="true" minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="1245.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="tvCompetidor" layoutX="648.0" layoutY="18.0" prefHeight="590.0" prefWidth="612.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="648.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0">
+                           <columns>
+                              <TableColumn fx:id="tcRMCptd" prefWidth="62.66650390625" text="RM" />
+                              <TableColumn fx:id="tcNomeCptd" prefWidth="160.33349609375" text="Nome" />
+                              <TableColumn fx:id="tcIdadeCptd" prefWidth="59.33349609375" text="Idade" />
+                              <TableColumn fx:id="tcSexoCptd" prefWidth="77.0" text="Sexo" />
+                              <TableColumn fx:id="tcInstituicaoCptd" minWidth="0.0" prefWidth="138.0" text="Instituição" />
+                              <TableColumn fx:id="tcTurmaCptd" prefWidth="100.0" text="Turma" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="26.0" layoutY="20.0" text="Cadastro de Competidores" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbRMCptd" focusColor="#ec407a" labelFloat="true" layoutX="256.0" layoutY="263.0" prefHeight="25.0" prefWidth="136.0" promptText="RM">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txbNomeCptd" focusColor="#ec407a" labelFloat="true" layoutX="134.0" layoutY="182.0" prefHeight="25.0" prefWidth="495.0" promptText="Nome">
+                           <font>
+                              <Font size="16.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txbTurmaCptd" focusColor="#ec407a" labelFloat="true" layoutX="158.0" layoutY="396.0" prefHeight="25.0" prefWidth="225.0" promptText="Turma">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txbIdadeCptd" focusColor="#ec407a" labelFloat="true" layoutX="132.0" layoutY="263.0" prefHeight="25.0" prefWidth="69.0" promptText="Idade">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXTextField>
+                        <JFXComboBox fx:id="cmbInstituicaoCptd" focusColor="#ec407a" labelFloat="true" layoutX="158.0" layoutY="485.0" prefHeight="25.0" prefWidth="195.0" promptText="Instituição" />
+                        <JFXButton id="btnReg" fx:id="btnRegCptd" layoutX="26.0" layoutY="571.0" onAction="#RegistrarCompetidor" prefHeight="31.0" prefWidth="606.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Registrar" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="26.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font></JFXButton>
+                        <JFXRadioButton fx:id="rbMascCptd" layoutX="439.0" layoutY="272.0" selected="true" text="Masculino">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexo_gr" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rbFemCptd" layoutX="539.0" layoutY="272.0" text="Feminino" toggleGroup="$sexo_gr">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                        <Label layoutX="439.0" layoutY="237.0" text="Sexo">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <JFXButton id="btnNovo" fx:id="btnNovoCptd" layoutX="964.0" layoutY="620.0" onAction="#NovoRegistroCompetidor" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="964.0" AnchorPane.rightAnchor="20.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/NOVO.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="btnRemover" fx:id="btnRmvCptd" layoutX="648.0" layoutY="620.0" onAction="#ApagarCompetidor" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="648.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/REMOVER.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="411.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="195.0">
+                           <image>
+                              <Image url="@../img/Competidor_pink_shadow.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblCptd" layoutX="26.0" layoutY="68.0" text="Novo Competidor - RM #" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="68.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnLimpar" fx:id="btnLimpCptd" layoutX="25.0" layoutY="622.0" onAction="#LimparDadosCompetidor" prefHeight="31.0" prefWidth="606.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Limpar" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="26.0" layoutY="121.0" text="Informações Pessoais" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="121.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="334.0" text="Informações Institucionais" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Instituicao_pink_shadow.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="415.0" layoutY="422.0" text="Participação em" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnNovo" fx:id="btnNovaInst" layoutX="358.0" layoutY="482.0" onAction="#regInst" prefHeight="29.0" prefWidth="24.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="+">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="cmbPartCptd" focusColor="#ec407a" layoutX="415.0" layoutY="460.0" prefHeight="25.0" prefWidth="171.0" promptText="Ano da Competição" />
+                        <JFXButton id="btnNovo" fx:id="btnCadPart" layoutX="592.0" layoutY="457.0" onAction="#regPart" prefHeight="29.0" prefWidth="24.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="+">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Avaliações">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="1245.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="tvAvaliacao" layoutX="648.0" layoutY="18.0" prefHeight="590.0" prefWidth="612.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="648.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0">
+                           <columns>
+                              <TableColumn fx:id="tcID_Avaliacao_Avl" prefWidth="130.0" text="ID Avaliação" />
+                              <TableColumn fx:id="tcRM_Avl" prefWidth="62.66650390625" text="RM" />
+                              <TableColumn fx:id="tcID_Jurado_Avl" prefWidth="168.0" text="Login Jurado" />
+                              <TableColumn fx:id="tc_Pontuacao_Avl" prefWidth="168.0" text="Pontuação" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="26.0" layoutY="20.0" text="Consulta de Avaliações" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnRemover" fx:id="btnRmv_Avl" layoutX="648.0" layoutY="620.0" onAction="#ApagarCompetidor" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="23.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/REMOVER.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="lblAvl" layoutX="26.0" layoutY="68.0" text="Avaliação - ID #" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="68.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="121.0" text="Informações" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="121.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="402.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="204.0">
+                           <image>
+                              <Image url="@../img/certificate.png" />
+                           </image>
+                        </ImageView>
+                        <JFXComboBox fx:id="cmbJuradoAvl" focusColor="#ec407a" layoutX="131.0" layoutY="189.0" prefHeight="25.0" prefWidth="457.0" promptText="Jurado" />
+                        <JFXComboBox fx:id="cmbAlunoAvl" focusColor="#ec407a" layoutX="131.0" layoutY="252.0" prefHeight="25.0" prefWidth="461.0" promptText="Aluno" />
+                        <JFXButton id="btnNovo" fx:id="btnAtAval" layoutX="648.0" layoutY="620.0" onAction="#carregarAvaliacoes" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="648.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/refresh.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Avaliacao.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Jurados">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Jurado.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="1245.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="tvJurado" layoutX="648.0" layoutY="18.0" prefHeight="590.0" prefWidth="612.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="648.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="18.0">
+                           <columns>
+                              <TableColumn fx:id="tcNomeJurado" prefWidth="160.33349609375" text="Nome" />
+                              <TableColumn fx:id="tcOcupacaoJurado" prefWidth="134.0" text="Ocupação" />
+                              <TableColumn fx:id="tcLoginJurado" prefWidth="88.0" text="Login" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="26.0" layoutY="20.0" text="Cadastro de Jurados" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbNomeJurado" focusColor="#ec407a" labelFloat="true" layoutX="131.0" layoutY="185.0" prefHeight="37.0" prefWidth="275.0" promptText="Nome">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txbOcupacaoJurado" focusColor="#ec407a" labelFloat="true" layoutX="131.0" layoutY="264.0" prefHeight="37.0" prefWidth="275.0" promptText="Ocupação">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txbLoginJurado" focusColor="#ec407a" labelFloat="true" layoutX="131.0" layoutY="395.0" prefHeight="25.0" prefWidth="500.0" promptText="Login">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txbSenhaJurado" focusColor="#ec407a" layoutX="132.0" layoutY="462.0" prefHeight="25.0" prefWidth="247.0" promptText="Senha" />
+                        <JFXPasswordField fx:id="txbRepeteSenhaJurado" focusColor="#ec407a" layoutX="389.0" layoutY="462.0" prefHeight="25.0" prefWidth="247.0" promptText="Repetir Senha" />
+                        <JFXButton id="btnReg" fx:id="btnRegJurado" layoutX="26.0" layoutY="571.0" onAction="#RegistrarJurado" prefHeight="31.0" prefWidth="606.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Registrar" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="26.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="btnNovo" fx:id="btnNovoJurado" layoutX="964.0" layoutY="620.0" onAction="#NovoRegistroJurado" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="964.0" AnchorPane.rightAnchor="20.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/NOVO.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="btnRemover" fx:id="btnRmvJurado" layoutX="648.0" layoutY="620.0" onAction="#ApagarCompetidor" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="648.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/REMOVER.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="399.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="207.0">
+                           <image>
+                              <Image url="@../img/juradotela.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblJurado" layoutX="26.0" layoutY="68.0" text="Novo Jurado  -  ID #" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="68.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnLimpar" fx:id="btnLimpJurado" layoutX="25.0" layoutY="622.0" onAction="#LimparDadosJurado" prefHeight="31.0" prefWidth="606.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Limpar" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="26.0" layoutY="121.0" text="Informações Pessoais" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="121.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="334.0" text="Informações de Acesso ao Sistema" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="64.0" fitWidth="62.0" layoutX="39.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/desbloquear.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="433.0" layoutY="228.0" text="Convidado em" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbCvtJrd" focusColor="#ec407a" layoutX="433.0" layoutY="266.0" prefHeight="25.0" prefWidth="171.0" promptText="Ano da Competição" />
+                        <JFXButton id="btnNovo" fx:id="btnCadCvt" layoutX="604.0" layoutY="263.0" onAction="#regConv" prefHeight="29.0" prefWidth="24.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="+">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+         <stylesheets>
+            <URL value="@stylesheetForms.css" />
+            <URL value="@stylesheetMenu.css" />
+         </stylesheets>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

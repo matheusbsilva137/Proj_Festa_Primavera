@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="349.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="221.0" prefWidth="349.0" style="-fx-background-color: #ec407a; -fx-padding: 5;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/iconLogin.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="15.0" layoutY="111.0" prefHeight="248.0" prefWidth="317.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="txbUsername" focusColor="#f06292" labelFloat="true" layoutX="15.0" layoutY="68.0" prefHeight="25.0" prefWidth="290.0" promptText="Login" />
+            <JFXPasswordField fx:id="txbSenha" focusColor="#f06292" labelFloat="true" layoutX="15.0" layoutY="128.0" prefHeight="25.0" prefWidth="290.0" promptText="Senha" />
+            <JFXButton id="btnLogin" fx:id="btnLogin" buttonType="RAISED" layoutX="8.0" layoutY="191.0" onAction="#login" prefHeight="32.0" prefWidth="304.0" style="-fx-border-radius: 30px;" stylesheets="@stylesheetLogin.css" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="66.0" layoutY="14.0" text="Festa da Primavera" textFill="#ec407a">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

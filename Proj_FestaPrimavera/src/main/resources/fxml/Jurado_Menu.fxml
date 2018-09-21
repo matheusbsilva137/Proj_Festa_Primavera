@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuJuradoController">
+   <children>
+      <JFXTabPane prefHeight="906.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Avaliações">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="593.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Label layoutX="26.0" layoutY="20.0" text="Cadastro de Avaliações" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txbNota_Avl" disable="true" focusColor="#ec407a" labelFloat="true" layoutX="352.0" layoutY="357.0" onKeyReleased="#atualizarNotas" prefHeight="34.0" prefWidth="129.0" promptText="Nota">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbCriterio_Avl" disable="true" focusColor="#ec407a" labelFloat="true" layoutX="134.0" layoutY="353.0" onAction="#limparNota" prefHeight="38.0" prefWidth="198.0" promptText="Critério" />
+                        <Label layoutX="26.0" layoutY="87.0" text="Informações" textFill="#ec407a" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="87.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="292.0" text="Critérios e Notas" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="171.0">
+                           <image>
+                              <Image url="@../img/certificate.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="76.0" fitWidth="80.0" layoutX="32.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Nota-A+.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="338.0" layoutY="391.0" prefHeight="35.0" prefWidth="10.0" text=":">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbEdicoes" disable="true" focusColor="#ec407a" layoutX="303.0" layoutY="158.0" prefHeight="25.0" prefWidth="114.0" promptText="Edição" />
+                        <JFXComboBox fx:id="cmbAlunos" disable="true" focusColor="#ec407a" layoutX="131.0" layoutY="221.0" prefHeight="25.0" prefWidth="288.0" promptText="Aluno" visibleRowCount="5" />
+                        <JFXButton id="btnReg" fx:id="btnSelAlunos" disable="true" layoutX="431.0" layoutY="153.0" onAction="#carregarAlunos" prefHeight="35.0" prefWidth="50.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="OK">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="btnReg" fx:id="btnSelCriterios" disable="true" layoutX="431.0" layoutY="216.0" onAction="#carregarCriterios" prefHeight="35.0" prefWidth="50.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="OK">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="txbNotas" disable="true" focusColor="#ec407a" layoutX="133.0" layoutY="420.0" prefHeight="25.0" prefWidth="351.0" promptText="Notas" />
+                        <Label layoutX="135.0" layoutY="475.0" text="Pontuação Final:" textFill="#ec407a">
+                           <font>
+                              <Font name="Trebuchet MS" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPontuacao" layoutX="298.0" layoutY="476.0" text="0.00">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="btnNovo" fx:id="btnAval" disable="true" layoutX="28.0" layoutY="555.0" onAction="#cadAval" prefHeight="35.0" prefWidth="519.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="Enviar Avaliação" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="txbLogin" focusColor="#ec407a" layoutX="126.0" layoutY="158.0" prefHeight="25.0" prefWidth="110.0" promptText="Login" />
+                        <JFXButton id="btnReg" fx:id="btnSelEd" layoutX="243.0" layoutY="154.0" onAction="#carregarEdicoes" prefHeight="35.0" prefWidth="50.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text="OK">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Avaliacao.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+         <stylesheets>
+            <URL value="@stylesheetForms.css" />
+            <URL value="@stylesheetMenu.css" />
+         </stylesheets>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
