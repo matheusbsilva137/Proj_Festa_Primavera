@@ -93,7 +93,15 @@ public class LoginController extends Application{
 		senha = (new BigInteger(1,m.digest()).toString(16));
 		
 		if(login.equals("ADM")) {
-			if(senha.equals("227586418f0f0bafd34b5e3fc1139369d950dc575531093c386a7628e15cf8ac")) {
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			session.beginTransaction();
+			String sql = String.format("SELECT COUNT(*) FROM jurado WHERE senha = '%s' AND login = 'ADM';", senha);
+			SQLQuery query = session.createSQLQuery(sql);
+			List result = query.list();
+			session.getTransaction().commit();
+			session.close();
+			
+			if(Integer.parseInt(result.get(0).toString()) == 1) {
 				adm = true;
 				return val = true;
 			}else { 

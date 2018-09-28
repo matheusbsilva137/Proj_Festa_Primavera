@@ -299,7 +299,7 @@
                               <Font name="Trebuchet MS" size="30.0" />
                            </font>
                         </Label>
-                        <JFXButton id="btnRemover" fx:id="btnRmv_Avl" layoutX="648.0" layoutY="620.0" onAction="#ApagarCompetidor" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="23.0">
+                        <JFXButton id="btnRemover" fx:id="btnRmv_Avl" layoutX="648.0" layoutY="620.0" onAction="#ApagarAvaliacao" prefHeight="35.0" prefWidth="296.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" stylesheets="@stylesheetForms.css" text=" " AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="23.0">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
